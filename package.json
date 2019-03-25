@@ -1,0 +1,24 @@
+{
+  "name": "metrics-recorder",
+  "version": "0.0.1",
+  "description": "Records metrics from Alation for debugging",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "test": "echo \"Hahaha. There are no tests...\" && exit 0"
+  },
+  "author": "Pratik Kabra",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-json-view": "^1.19.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "webpack": "^4.29.6"
+  }
+}

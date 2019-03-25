@@ -1,0 +1,20 @@
+{
+  "name": "Alation Metrics Recorder",
+  "version": "0.1",
+  "description": "Records metrics from Alation servers and displays them through UI",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "permissions": [
+    "declarativeContent",
+    "tabs",
+    "webRequest",
+    "*://*.alation-test.com/"
+  ],
+  "page_action": {
+    "default_popup": "popup.html"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "manifest_version": 2
+}
