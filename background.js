@@ -7,6 +7,9 @@ chrome.runtime.onInstalled.addListener(function() {
       conditions: [
         new chrome.declarativeContent.PageStateMatcher({
           pageUrl: {hostContains: 'alation'},
+        }),
+        new chrome.declarativeContent.PageStateMatcher({
+          pageUrl: {hostContains: 'local'},
         })
       ],
       actions: [new chrome.declarativeContent.ShowPageAction()]
@@ -57,7 +60,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
   }
 });
 
-chrome.tabs.onRemoved.addEventListener(function (tabId) {
+chrome.tabs.onRemoved.addListener(function (tabId) {
   delete window.ALATION_START_CAPTURE[tabId];
   delete window.ALATION_CAPTURED_METRICS[tabId];
 });

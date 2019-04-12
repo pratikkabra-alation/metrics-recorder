@@ -10,7 +10,9 @@
     "declarativeContent",
     "tabs",
     "webRequest",
-    "*://*.alation-test.com/"
+    "*://*.alationdata.com/",
+    "*://*.alation-test.com/",
+    "*://localhost/"
   ],
   "page_action": {
     "default_popup": "popup.html"
