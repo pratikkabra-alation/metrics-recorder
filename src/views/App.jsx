@@ -7,7 +7,7 @@ class App extends React.Component {
     this.state = {
       isRecording: false,
       tabId: null,
-      metrics: null
+      metrics: null,
     }
     this.getStateFromBackground = this.getStateFromBackground.bind(this);
     this.sendBackgroundMessage = this.sendBackgroundMessage.bind(this);

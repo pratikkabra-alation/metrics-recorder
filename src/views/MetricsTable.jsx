@@ -20,7 +20,9 @@ class MetricsTable extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      filter: ''
+      filter: '',
+      hideAjaxLoad: false,
+      hidePageLoad: false,
     };
     this.handleFilter = this.handleFilter.bind(this);
   }
@@ -31,12 +33,18 @@ class MetricsTable extends React.Component {
 
   render() {
     const {metrics} = this.props;
-    const {filter} = this.state;
+    const {filter, hideAjaxLoad, hidePageLoad} = this.state;
     if (!metrics) return null;
 
     let filteredMetrics = metrics;
-    if (filter.length) {
-      filteredMetrics = metrics.filter((metric) => metric.name.indexOf(filter) > -1);
+    if (filter.length || hideAjaxLoad || hidePageLoad) {
+      filteredMetrics = metrics.filter((metric) => {
+        return (
+          metric.name.indexOf(filter) > -1 &&
+          !(hideAjaxLoad && metric.name.indexOf('ajaxload.') > -1) &&
+          !(hidePageLoad && metric.name.indexOf('pageload.') > -1)
+        );
+      });
     }
 
     return (
@@ -45,6 +53,17 @@ class MetricsTable extends React.Component {
           <input
             className='form-control'
             onChange={this.handleFilter} />
+          <br />
+          <input
+            type='checkbox'
+            onChange={() => this.setState({hideAjaxLoad: !hideAjaxLoad})} />
+            &nbsp;Hide AjaxLoad Events
+          <br />
+          <input
+            type='checkbox'
+            onChange={() => this.setState({hidePageLoad: !hidePageLoad})} />
+            &nbsp;Hide PageLoad Events
+          <br />
         </div>
         <br />
         <table className='table'>
