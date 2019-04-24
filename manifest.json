@@ -10,6 +10,8 @@
     "declarativeContent",
     "tabs",
     "webRequest",
+    "*://*.alationcatalog.com/",
+    "*://*.alationcorp.com/",
     "*://*.alationdata.com/",
     "*://*.alation-test.com/",
     "*://localhost/"
