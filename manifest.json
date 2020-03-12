@@ -14,6 +14,7 @@
     "*://*.alationcorp.com/",
     "*://*.alationdata.com/",
     "*://*.alation-test.com/",
+    "*://*.rainforestalation.com/",
     "*://localhost/"
   ],
   "page_action": {
