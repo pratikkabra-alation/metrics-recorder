@@ -10,8 +10,11 @@
     "declarativeContent",
     "tabs",
     "webRequest",
+    "*://*.alationcatalog.com/",
+    "*://*.alationcorp.com/",
     "*://*.alationdata.com/",
     "*://*.alation-test.com/",
+    "*://*.rainforestalation.com/",
     "*://localhost/"
   ],
   "page_action": {
