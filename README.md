@@ -7,5 +7,5 @@ Instructions for Chrome Version 76.0.3809.132.
 3. Click 'Load unpacked' button.
 4. Select top-level directory of this repo.
 
-'Alation Metrics Recorder' extension should now be loaded in your browser.
+'Alation Similar Queries' extension should now be loaded in your browser.
 
