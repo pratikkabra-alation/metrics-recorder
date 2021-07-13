@@ -11,6 +11,7 @@
     "tabs",
     "webRequest",
     "*://*.alationcatalog.com/",
+    "*://*.alationcloud.com/",
     "*://*.alationcorp.com/",
     "*://*.alationdata.com/",
     "*://*.alation-test.com/",
